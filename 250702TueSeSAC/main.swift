@@ -12,7 +12,7 @@ import Foundation
  EX)
  1 2
  1 2
-  123
+ 123
  */
 
 
@@ -55,7 +55,7 @@ import Foundation
 //let input = readLine()!.split(separator: "").map { String($0) }
 //var answer = ""
 //for i in input {
-//    
+//
 //   print(input)
 //}
 //
@@ -99,11 +99,11 @@ import Foundation
 //
 //
 //for i in 0..<answer.count {
-//    
+//
 //    print(answer[i])
 //    if answer[i].count == 0 { break }
 //    a += String(answer[i].first!)
-//    
+//
 //    answer.removeFirst()
 //}
 
@@ -115,7 +115,7 @@ import Foundation
 //
 //for i in 0..<5 {
 //    let input = readLine()!.map { String($0) }
-//    
+//
 //    for j in 0..<input.count {
 //        board[i][j] = input[j]
 //    }
@@ -179,11 +179,11 @@ import Foundation
 //      print("FRI")
 //   case 6:
 //      print("SAT")
-//       
+//
 //   default:
 //      print("SUN")
 //   }
-//    
+//
 //}
 //
 //sol()
@@ -193,7 +193,7 @@ import Foundation
 //
 //for i in 0..<board.count {
 //   board[board.count - 1 - i] = "*"
-//    
+//
 //}
 
 //let input = Int(readLine()!)!
@@ -239,25 +239,25 @@ import Foundation
 //}
 
 
-let n = Int(readLine()!)!
-
-for i in 1..<n {
-    let stars = String(repeating: "* ", count: i)
-    let spaces = String(repeating: " ", count: (n - i))
-    print(spaces + stars)
-    
-    
-    
-}
-
-print(String(repeating: "*", count: 2 * n - 1))
+//let n = Int(readLine()!)!
+//
+//for i in 1..<n {
+//    let stars = String(repeating: "* ", count: i)
+//    let spaces = String(repeating: " ", count: (n - i))
+//    print(spaces + stars)
+//
+//
+//
+//}
+//
+//print(String(repeating: "*", count: 2 * n - 1))
 
 
 //let n = Int(readLine()!)!
 //
 //for i in 1..<n {
 //    let spaces = String(repeating: " ", count: (n - i))
-//    
+//
 //    if i == 1 {
 //        print(spaces + "*")
 //    } else {
@@ -269,13 +269,63 @@ print(String(repeating: "*", count: 2 * n - 1))
 //print(String(repeating: "*", count: 2 * n - 1))
 /*
  
-   *
-  * *
+ *
+ * *
  *   *
-*******
-
+ *******
+ 
  첫 줄: (n-1)개 공백 + "*"
  중간 줄: (n-i)개 공백 + "*" + (2i-3)개 공백 + "*"
  마지막 줄: (2n-1)개 "*"
  
-*/
+ */
+
+//let testCaseNum = Int(readLine()!)!
+//
+//var answer: [Int] = []
+//
+//for i in 0..<testCaseNum {
+//    let input = readLine()!.split(separator: " ").map { String($0) }
+//    
+//    let first = input[0]
+//    let second = input[1]
+//    
+//    var a: [Int] = []
+//    var b: [Int] = []
+//    
+//    for i in first.utf16 {
+//        a.append(Int(i))
+//    }
+//    
+//    for i in second.utf16 {
+//        b.append(Int(i))
+//    }
+//    
+//    for i in 0..<a.count {
+//        if a[i] < b[i] {
+//            answer.append(b[i] - a[i])
+//        } else if  a[i] > b[i] {
+//            answer.append(b[i] + 26 - a[i])
+//        } else {
+//            answer.append(0)
+//        }
+//    }
+//    
+//    let result = answer.map { String($0) }.joined(separator: " ")
+//    print("Distances: \(result)")
+//    
+//    answer = []
+//}
+
+
+//let correctArray = [1, 1, 2, 2, 2, 8]
+//let input = readLine()!.split(separator: " ").map { Int($0)! }
+//var answer: [Int] = []
+//
+//for i in 0..<input.count {
+//   answer.append(correctArray[i] - input[i])
+//}
+//
+//let result = answer.map { String($0) }.joined(separator: " ")
+//
+//print(result)
