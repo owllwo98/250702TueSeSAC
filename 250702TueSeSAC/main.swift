@@ -517,26 +517,111 @@ import Foundation
 
 
 
-let n = Int(readLine()!)!
+//let n = Int(readLine()!)!
+//
+//var dic: [String: Bool] = [:]
+//
+//for _ in 0..<n {
+//    let input = readLine()!.split(separator: " ").map { String($0) }
+//    
+//    if input[1] == "enter" {
+//        dic[input[0]] = true
+//    } else {
+//        dic.removeValue(forKey: input[0])
+//    }
+//}
+//
+//var answer = ""
+//for key in dic.keys.sorted(by: >) {
+//    answer += "\(key)\n"
+//}
+//
+//print(answer)
 
-var dic: [String: Bool] = [:]
 
-for _ in 0..<n {
-    let input = readLine()!.split(separator: " ").map { String($0) }
-    
-    if input[1] == "enter" {
-        dic[input[0]] = true
-    } else {
-        dic.removeValue(forKey: input[0])
-    }
-}
+//let n = Int(readLine()!)!
+//var dic: [Int: Int] = [:]
+//
+//for i in 0..<n {
+//    let input = Int(readLine()!)!
+//    
+////    if let dic = dic[input] {
+////        dic = 1
+////    } else {
+////        dic += 1
+////    }
+//    
+//    
+//}
+//
+//var answer = ""
+//for key in dic.keys.sorted() {
+//    answer += "\(key)"
+//}
+//
+//print(answer)
 
-var answer = ""
-for key in dic.keys.sorted(by: >) {
-    answer += "\(key)\n"
-}
 
-print(answer)
+//let n = readLine()!.split(separator: " ").map { Int($0)! }
+//var dic: [String:Bool] = [:]
+//var answer: [String] = []
+//
+//for _ in 0..<n[0] + n[1] {
+//    let input = readLine()!
+//
+//    if dic[input] == true {
+//        dic[input] = false
+//    } else {
+//        dic[input] = true
+//    }
+//}
+//
+//for i in dic {
+//    if i.value == false {
+//        answer.append(i.key)
+//    }
+//}
+//
+//
+//print(answer.count)
+//for i in answer.sorted() {
+//    print(i)
+//}
+
+//let n = Int(readLine()!)!
+//var board: [Int] = []
+//var dic: [String:Int] = [:]
+//
+//for _ in 0..<n {
+//    let input = readLine()!
+//    var score = 0
+//    
+//    for char in input {
+//        if Int(String(char)) != nil {
+//            score += Int(String(char))!
+//        } else {
+//            dic[input] = 0
+//        }
+//    }
+//
+//    dic[input] = score
+//}
+//
+//let sortedByValue = dic.sorted {
+//    if $0.key.count != $1.key.count {
+//        return $0.key.count < $1.key.count
+//    }
+//    
+//    if $0.value != $1.value {
+//        return $0.value < $1.value
+//    }
+//    
+//    return $0.key < $1.key
+//}
+//
+//for (key, _) in sortedByValue {
+//    print("\(key)")
+//}
 
 
 
