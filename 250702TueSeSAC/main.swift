@@ -329,3 +329,215 @@ import Foundation
 //let result = answer.map { String($0) }.joined(separator: " ")
 //
 //print(result)
+
+
+//let roomSize = Int(readLine()!)!
+//var answer = 0
+//var count = 0
+//
+//for i in 0..<roomSize {
+//    
+//    let input = readLine()!.split(separator: "").map { String($0) }
+//    
+//    var a: [String] = []
+//    
+//    print(input)
+//    
+//    
+//    for i in input {
+//        count += 1
+//        if i == "X" {
+//            if count > 2 {
+//                answer += 1
+//                count = 0
+//            }
+//        } else if count == 5 {
+//            answer += 1
+//        }
+//    }
+//    
+//    
+//}
+//
+//print(answer)
+
+
+//struct Person {
+//    let name: String
+//    let age: Int
+//}
+//
+//var arr: [Person] = [
+//  Person(name: "Bran", age: 22), Person(name: "Hue", age: 20),
+//  Person(name: "Jack", age: 24), Person(name: "Finn", age: 20)
+//]
+//
+//arr.sort {
+//    if $0.age == $1.age {
+//        return $0.name < $1.name
+//    } else {
+//        return $0.age < $1.age
+//    }
+//}
+//
+//print(arr)
+
+//var arr = [3, 1, -2, 5, 10, 10]
+//arr.sort { $0 > $1 }
+//print(arr)
+
+//var board: [Int] = []
+//
+//func sol() {
+//    let n = Int(readLine()!)!
+//
+//    for i in 1...n {
+//        let input = Int(readLine()!)!
+//        board.append(input)
+//    }
+//
+//    board.sort(by: <)
+//
+//
+//    for i in board {
+//        print(i)
+//    }
+//}
+//
+//sol()
+
+//let n = Int(readLine()!)!
+//var arr: [Int] = []
+//
+//for _ in 0..<n {
+//    let input = Int(readLine()!)!
+//    arr.append(input)
+//}
+//
+//arr.sort()
+//
+//var answer = ""
+//for element in arr {
+//    answer += "\(element)\n"
+//}
+//
+//print(answer)
+
+//let n = Int(readLine()!)!
+//var board: [(x: Int, y: Int)] = []
+//
+//for _ in 0..<n {
+//    let input = readLine()!.split(separator: " ").map { Int($0)! }
+//    board.append((input[0], input[1]))
+//}
+//
+//board.sort { $0.x == $1.x ? $0.y < $1.y : $0.x < $1.x}
+//
+//for i in board {
+//    print(i.x, i.y)
+//}
+
+
+
+//let n = Int(readLine()!)!
+//var board: [(age: Int, name: String, index: Int)] = []
+//
+//for i in 0..<n {
+//    let input  = readLine()!.split(separator: " ").map { String($0) }
+//    board.append((Int(input[0])!, input[1], i))
+//}
+//
+//board.sort {
+//    if $0.age == $1.age {
+//        $0.index < $1.index
+//    } else {
+//        $0.age < $1.age
+//    }
+//}
+//
+//for i in board {
+//    print(i.age, i.name)
+//}
+
+//let n = Int(readLine()!)!
+//var board: [(name: String, ko: Int, eng: Int, math: Int)] = []
+//
+//func sol() {
+//    for i in 0..<n {
+//        let input = readLine()!.split(separator: " ").map { String($0) }
+//        
+//        board.append((input[0], Int(input[1])!, Int(input[2])!, Int(input[3])!))
+//    }
+//}
+//
+//sol()
+
+//board.sort {
+//    if $0.ko == $1.ko && $0.eng != $1.eng && $0.math != $1.math  {
+//        $0.eng < $1.eng
+//    } else if $0.ko == $1.ko && $0.eng == $1.eng && $0.math != $1.math {
+//        $0.math > $1.math
+//    } else if $0.ko == $1.ko && $0.eng == $1.eng && $0.math == $1.math  {
+//        $0.name < $1.name
+//    } else {
+//        $0.ko > $1.ko
+//    }
+//}
+
+//board.sort {
+//    if $0.ko != $1.ko {
+//        return $0.ko > $1.ko
+//    } else if $0.eng != $1.eng {
+//        return $0.eng < $1.eng
+//    } else if $0.math != $1.math {
+//        return $0.math > $1.math
+//    } else {
+//        return $0.name < $1.name
+//    }
+//}
+//
+//for i in board {
+//    print(i.name)
+//}
+
+/*
+ Donghyuk
+ Sangkeun
+ Sunyoung
+ nsj
+ Wonseob
+ Sanghyun
+ Sei
+ Kangsoo
+ Haebin
+ Junkyu
+ Soong
+ Taewhan
+ */
+
+
+
+let n = Int(readLine()!)!
+
+var dic: [String: Bool] = [:]
+
+for _ in 0..<n {
+    let input = readLine()!.split(separator: " ").map { String($0) }
+    
+    if input[1] == "enter" {
+        dic[input[0]] = true
+    } else {
+        dic.removeValue(forKey: input[0])
+    }
+}
+
+var answer = ""
+for key in dic.keys.sorted(by: >) {
+    answer += "\(key)\n"
+}
+
+print(answer)
+
+
+
+
