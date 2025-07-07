@@ -624,44 +624,325 @@ import Foundation
 //}
 
 
-let input = readLine()!.split(separator : " ").map{String($0)}
+//let input = readLine()!.split(separator : " ").map{String($0)}
+//
+//let S = input[0], E = input[1], Q = input[2]
+//
+//let Stime = Int(S.split(separator: ":")[0])!*60 + Int(S.split(separator: ":")[1])!
+//let Etime = Int(E.split(separator: ":")[0])!*60 + Int(E.split(separator: ":")[1])!
+//let Qtime = Int(Q.split(separator: ":")[0])!*60 + Int(Q.split(separator: ":")[1])!
+//
+//var user = [String:Int]()
+//var total = 0
+//
+//while true  {
+//    var input2 : String? = nil
+//    input2 = readLine()
+//    if input2 == nil || input2! == "" {
+//        break
+//    }
+//    let timeStr = input2!.split(separator : " ")[0]
+//    let name = String(input2!.split(separator : " ")[1])
+//    
+//    let time = Int(timeStr.split(separator: ":")[0])!*60 + Int(timeStr.split(separator: ":")[1])!
+//    
+//    if time <= Stime {
+//        if user[name] == nil {
+//            user[name] = 1
+//        }
+//    }else if time >= Etime && time <= Qtime {
+//        if let c = user[name] {
+//            if c == 1 {
+//                user[name]! += 1
+//                total += 1
+//            }
+//        }
+//    }
+//}
+//
+//print(total)
 
-let S = input[0], E = input[1], Q = input[2]
 
-let Stime = Int(S.split(separator: ":")[0])!*60 + Int(S.split(separator: ":")[1])!
-let Etime = Int(E.split(separator: ":")[0])!*60 + Int(E.split(separator: ":")[1])!
-let Qtime = Int(Q.split(separator: ":")[0])!*60 + Int(Q.split(separator: ":")[1])!
 
-var user = [String:Int]()
-var total = 0
+//let input = readLine()!.split(separator: " ").map { String($0) }
+//let start = input[0], end = input[1], stream = input[2]
+//
+//var enter: Set<String> = []
+//var leave: Set<String> = []
+//
+//while let input = readLine() {
+//    let input = input.split(separator: " ").map { String($0) } // "21:30", "malkoring"
+//
+//    // 개강총회 시작전에 채팅을 친 사람
+//    if start >= input[0] { // 21:30, 21:33
+//        enter.insert(input[1])
+//        // 개강총회 종료 후, 스트리밍 종료 이전까지 채팅을 친 사람들 (퇴장)
+//    } else if input[0] >= end && input[0] <= stream {
+//        leave.insert(input[1]) // 출석을 하고, 퇴장을 한 사람들
+//    }
+//}
+//
+//print(leave.count)
 
-while true  {
-    var input2 : String? = nil
-    input2 = readLine()
-    if input2 == nil || input2! == "" {
-        break
-    }
-    let timeStr = input2!.split(separator : " ")[0]
-    let name = String(input2!.split(separator : " ")[1])
+//let n = Int(readLine()!)!
+//
+//func solution(_ n: Int) -> [[Int]] {
+//    var answer: [[Int]] = .init(repeating: .init(repeating: 0, count: n), count: n)
+//    let dy = [0, 1, 0, -1]
+//    let dx = [1, 0, -1, 0]
+//
+//    var y = 0, x = 0, dir = 0
+//
+//    for i in 1...n * n {
+//        answer[y][x] = i
+//        let ny = y + dy[dir]
+//        let nx = x + dx[dir]
+//
+//        // 벽을 만나거나, 이미 값이 채워져있다면 방향을 바꿔줘야한다
+//        if ny < 0 || ny >= n || nx < 0 || nx >= n || answer[ny][nx] != 0 {
+//            dir = (dir + 1) % 4
+//            y = y + dy[dir]
+//            x = x + dx[dir]
+//        } else {
+//            y = ny
+//            x = nx
+//        }
+//    }
+//
+//    return answer
+//}
+//
+//print(solution(n))
+
+//func sol() {
+//    let n = Int(readLine()!)!
+//    var board: [String] = []
+//
+//    for i in 0..<n {
+//        let input = readLine()!
+//
+//        board.append(input)
+//    }
+//
+//    let k = Int(readLine()!)!
+//
+//    switch  k {
+//    case 1:
+//        print(board)
+//    case 2:
+//        print(board)
+//    case 3:
+//        print(board)
+//    default:
+//        print(board)
+//    }
+//}
+//
+//sol()
+
+//var board: [String] = []
+//
+//func sol() {
+//    let n = Int(readLine()!)!
+//
+//    for i in 0..<n {
+//        let input = readLine()!
+//
+//        board.append(input)
+//    }
+//}
+//
+//sol()
+//
+//let k = Int(readLine()!)!
+//
+//switch k {
+//    case 1:
+//    for i in board {
+//        print(i)
+//    }
+//    case 2:
+//    for i in board {
+//        let reverse = i.reversed()
+//        
+//        print(String(reverse))
+//        
+//    }
+//    case 3:
+//        for i in board.reversed() {
+//            print(i)
+//        }
+//    default:
+//        print(board)
+//}
+
+//let dy = [0, 1, 0, -1]
+//let dx = [1, 0, -1, 0]
+//var y = 0, x = 0, dir = 0
+//
+//let size = readLine()!.split(separator: " ").map { Int($0)! }
+//let rows = size[0]
+//let cols = size[1]
+//
+//var answer: [[String]] = Array(repeating: Array(repeating: "", count: cols), count: rows)
+//var array: [[String]] = []
+//var count = 0
+//
+//for _ in 0..<rows {
+//    let input = Array(readLine()!).map { String($0) }
+//    array.append(input)
+//}
+//
+//for i in 0..<rows * cols {
+//    if rows > 8 && cols > 8 {
+//        for _ in 0..<rows * cols {
+//            if (y + x) % 2 == 0 {
+//                answer[y][x] = (array[0][0] == "B") ? "B" : "W"
+//            } else {
+//                answer[y][x] = (array[0][0] == "B") ? "W" : "B"
+//            }
+//
+//            let ny = y + dy[dir]
+//            let nx = x + dx[dir]
+//            
+//            if ny < 0 || ny >= rows || nx < 0 || nx >= cols || answer[ny][nx] != "" {
+//                dir = (dir + 1) % 4
+//                y = y + dy[dir]
+//                x = x + dx[dir]
+//            } else {
+//                y = ny
+//                x = nx
+//            }
+//        }
+//        
+//        for i in 0..<rows{
+//            for j in 0..<cols {
+//                if answer[i][j] != array[i][j] {
+//                    count += 1
+//                }
+//            }
+//        }
+//        
+//        count = 0
+//
+//    }
+//    
+//    
+//}
+//
+//if rows > 8 && cols > 8 {
+//    for _ in 0..<rows * cols {
+//        if (y + x) % 2 == 0 {
+//            answer[y][x] = (array[0][0] == "B") ? "B" : "W"
+//        } else {
+//            answer[y][x] = (array[0][0] == "B") ? "W" : "B"
+//        }
+//
+//        let ny = y + dy[dir]
+//        let nx = x + dx[dir]
+//        
+//        if ny < 0 || ny >= rows || nx < 0 || nx >= cols || answer[ny][nx] != "" {
+//            dir = (dir + 1) % 4
+//            y = y + dy[dir]
+//            x = x + dx[dir]
+//        } else {
+//            y = ny
+//            x = nx
+//        }
+//    }
+//    
+//    for i in 0..<rows{
+//        for j in 0..<cols {
+//            if answer[i][j] != array[i][j] {
+//                count += 1
+//            }
+//        }
+//    }
+//    
+//    count = 0
+//
+//}
+//for _ in 0..<rows * cols {
+//    if (y + x) % 2 == 0 {
+//        answer[y][x] = (array[0][0] == "B") ? "B" : "W"
+//    } else {
+//        answer[y][x] = (array[0][0] == "B") ? "W" : "B"
+//    }
+//
+//    let ny = y + dy[dir]
+//    let nx = x + dx[dir]
+//    
+//    if ny < 0 || ny >= rows || nx < 0 || nx >= cols || answer[ny][nx] != "" {
+//        dir = (dir + 1) % 4
+//        y = y + dy[dir]
+//        x = x + dx[dir]
+//    } else {
+//        y = ny
+//        x = nx
+//    }
+//}
+
+//for i in 0..<rows{
+//    for j in 0..<cols {
+//        if answer[i][j] != array[i][j] {
+//            count += 1
+//        }
+//    }
+//}
+//
+//print(count % 2)
+
+var board: [[String]] = Array(repeating: Array(repeating: "", count: 5), count: 5)
+var dic: [String: (y: Int, x: Int)] = [:]
+var answer: [String] = []
+
+var countBoard: [(y: Int, x: Int)] = []
+var xCount: [Int] = .init(repeating: 0, count: 5)
+var yCount: [Int] = .init(repeating: 0, count: 5)
+
+dic.reserveCapacity(25)
+
+for y in 0..<10 {
+    let input = readLine()!.split(separator: " ")
     
-    let time = Int(timeStr.split(separator: ":")[0])!*60 + Int(timeStr.split(separator: ":")[1])!
-    
-    if time <= Stime {
-        if user[name] == nil {
-            user[name] = 1
+    if y < 5 {
+        for x in 0..<5 {
+            let value = String(input[x])
+            board[y][x] = value
+            dic[value] = (y: y, x: x)
         }
-    }else if time >= Etime && time <= Qtime {
-        if let c = user[name] {
-            if c == 1 {
-                user[name]! += 1
-                total += 1
-            }
+    } else {
+        for x in 0..<5 {
+            let value = String(input[x])
+            answer.append(value)
         }
     }
 }
 
-print(total)
+//print(answer)
 
+
+
+func check() {
+    for number in answer {
+        if let position = dic[number] {
+            countBoard.append(position)
+        }
+    }
+    
+    for position in countBoard {
+        
+        if position.x >= 0 && position.x < 5 {
+            yCount[position.x] += 1
+        }
+        
+        if position.y >= 0 && position.y < 5 {
+            xCount[position.y] += 1
+        }
+    }
+}
+
+check()
 
 
 
