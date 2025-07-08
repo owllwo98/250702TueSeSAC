@@ -892,57 +892,112 @@ import Foundation
 //
 //print(count % 2)
 
-var board: [[String]] = Array(repeating: Array(repeating: "", count: 5), count: 5)
-var dic: [String: (y: Int, x: Int)] = [:]
-var answer: [String] = []
+//var board: [[String]] = Array(repeating: Array(repeating: "", count: 5), count: 5)
+//var dic: [String: (y: Int, x: Int)] = [:]
+//var answer: [String] = []
+//
+//var countBoard: [(y: Int, x: Int)] = []
+//var xCount: [Int] = .init(repeating: 0, count: 5)
+//var yCount: [Int] = .init(repeating: 0, count: 5)
+//
+//dic.reserveCapacity(25)
+//
+//for y in 0..<10 {
+//    let input = readLine()!.split(separator: " ")
+//    
+//    if y < 5 {
+//        for x in 0..<5 {
+//            let value = String(input[x])
+//            board[y][x] = value
+//            dic[value] = (y: y, x: x)
+//        }
+//    } else {
+//        for x in 0..<5 {
+//            let value = String(input[x])
+//            answer.append(value)
+//        }
+//    }
+//}
+//
+////print(answer)
+//
+//
+//
+//func check() {
+//    for number in answer {
+//        if let position = dic[number] {
+//            countBoard.append(position)
+//        }
+//    }
+//    
+//    for position in countBoard {
+//        
+//        if position.x >= 0 && position.x < 5 {
+//            yCount[position.x] += 1
+//        }
+//        
+//        if position.y >= 0 && position.y < 5 {
+//            xCount[position.y] += 1
+//        }
+//    }
+//}
+//
+//check()
 
-var countBoard: [(y: Int, x: Int)] = []
-var xCount: [Int] = .init(repeating: 0, count: 5)
-var yCount: [Int] = .init(repeating: 0, count: 5)
 
-dic.reserveCapacity(25)
 
-for y in 0..<10 {
-    let input = readLine()!.split(separator: " ")
-    
-    if y < 5 {
-        for x in 0..<5 {
-            let value = String(input[x])
-            board[y][x] = value
-            dic[value] = (y: y, x: x)
-        }
-    } else {
-        for x in 0..<5 {
-            let value = String(input[x])
-            answer.append(value)
-        }
-    }
-}
+//var count = 0
+//var array: [Int] = []
+//
+//for i in 0..<4 {
+//    let input = readLine()!.split(separator: " ").map { Int($0)! }
+//
+//    count = count - input[0] + input[1]
+//    array.append(count)
+//}
+//
+//print(array.max()!)
 
+//var a = 1
+//var b = 1
+//var c = 1
+//
+//var answer = 0
+//
+//let input = Int(readLine()!)!
+//
+//if input < 3 { answer = 0 } else {
+//    for i in 1...input - 2 {
+//        for j in 1...input - 2 {
+//            for k in 1...input - 2 {
+//                a = i
+//                b = j
+//                c = k
+//                
+//                if a % 2 == 0 && c >= b + 2 && a + b + c == input {
+//                    answer += 1
+//                }
+//            }
+//        }
+//    }
+//}
+//
 //print(answer)
 
-
-
-func check() {
-    for number in answer {
-        if let position = dic[number] {
-            countBoard.append(position)
-        }
-    }
-    
-    for position in countBoard {
-        
-        if position.x >= 0 && position.x < 5 {
-            yCount[position.x] += 1
-        }
-        
-        if position.y >= 0 && position.y < 5 {
-            xCount[position.y] += 1
-        }
-    }
-}
-
-check()
-
-
-
+//let nm = readLine()!.split(separator: " ").map { Int($0)! }
+//let card = readLine()!.split(separator: " ").map { Int($0)! }
+//var result: [Int] = []
+//
+//for i in 0..<card.count {
+//    for j in (i+1)..<card.count {
+//        for k in (j+1)..<card.count {
+//            result.append(card[i] + card[j] + card[k])
+//        }
+//    }
+//}
+//
+//
+//
+//let answer = result.map { nm[1] - $0 }.sorted { $0 < $1 }.filter { $0 >= 0 }
+//
+//print(nm[1] - answer.first!)
