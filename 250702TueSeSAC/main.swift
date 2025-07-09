@@ -1001,3 +1001,174 @@ import Foundation
 //let answer = result.map { nm[1] - $0 }.sorted { $0 < $1 }.filter { $0 >= 0 }
 //
 //print(nm[1] - answer.first!)
+
+
+//var dwarf:[Int] = .init(repeating: 0, count: 9)
+//
+//for i in 0..<9 {
+//    dwarf[i] = Int(readLine()!)!
+//}
+//
+//let target = dwarf.reduce(0, +) - 100
+//
+//for i in 0..<9{
+//    for j in (i + 1)..<9 {
+//        if dwarf[i] + dwarf[j] == target {
+//            var array = [i, j]
+//            array.sort()
+//            
+//            dwarf.remove(at: array[0])
+//            dwarf.remove(at: array[1])
+//            
+//            print(dwarf.sort())
+//        }
+//    }
+//}
+
+
+//var heights:[Int] = .init(repeating: 0, count: 9)
+//
+//for i in 0..<9 {
+//    heights[i] = Int(readLine()!)!
+//}
+//
+//let total = heights.reduce(0, +)
+//var result: [Int] = []
+//
+//for i in 0..<9 {
+//    for j in (i + 1)..<9 {
+//        if total - (heights[i] + heights[j]) == 100 {
+//            result = heights.enumerated().filter { $0.offset != i && $0.offset != j }.map { $0.element }.sorted()
+//        }
+//    }
+//}
+//
+//for i in result {
+//    print(i)
+//}
+
+
+//var answer = 0
+//let input = Int(readLine()!)!
+//
+//if input < 3 { answer = 0 } else {
+//    for i in 1...input {
+//        for j in 1...input {
+//            for k in 1...input {
+//                if i % 2 == 0 && k >= j + 2 && i + j + k == input {
+//                    answer += 1
+//                }
+//            }
+//        }
+//    }
+//}
+
+//print(answer)
+
+//let input = Int(readLine()!)!
+//var char: [Int] = []
+//
+//for i in 0...9 {
+//    for j in 0...9 {
+//        for k in 0...9 {
+//            for f in 0...9 {
+//                for h in 0...9 {
+//                    for p in 0...9 {
+//                        for l in 0...9 {
+//                            if input == i + j + k + Int(String(i) + String(j) + String(k) + String(f) + String(h) + String(p) + String(l))!     {
+//                                char.append(Int(String(i) + String(j) + String(k))!)
+//                                print(String(i) + String(j) + String(k) + String(f) + String(h) + String(p) + String(l))
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//print(char.sorted().first ?? 0)
+
+
+//let input = readLine()!.split(separator: " ").map { Int($0)! }
+//var answer = 1
+//
+//while true {
+//    if (answer - 1) % 15 + 1 == input[0] && (answer - 1) % 28 + 1 == input[1] && (answer - 1) % 19 + 1 == input[2] {
+//        break
+//    }
+//    answer += 1
+//}
+//
+//print(answer)
+
+//
+//let input = readLine()!.split(separator: " ").map { Int($0)! }
+//var answer = input[1]
+//
+//if input[0] == 1 && input[1] == 1 && input[2] == 1 {
+//    answer = 1
+//} else {
+//    while true {
+//        if (answer - 1) % 15 + 1 == input[0] && (answer - 1) % 28 + 1 == input[1] && (answer - 1) % 19 + 1 == input[2] {
+//            break
+//        }
+//        answer += 28
+//    }
+//}
+//
+//print(answer)
+
+
+// BOJ2231
+//let input = Int(readLine()!)!
+//var char: [Int] = []
+//var answer = 0
+//
+//for i in 1...input {
+//    char = String(i).map { Int(String($0))! }
+//    
+//    if char.reduce(0, +) + i == input {
+//        answer = i
+//        break
+//    } else {
+//        answer = 0
+//    }
+//}
+//
+//print(answer)
+
+
+let n = Int(readLine()!)!
+var board: [[String]] = []
+var answer = 0
+var char: [Int] = []
+
+for i in 0..<n {
+    let input = readLine()!.map { String($0) }
+    board.append(input)
+    char.append(Set(input).count)
+}
+
+
+
+for i in 0...n - 1 {
+    for j in 0..<n {
+        if i + 1 == n {
+            break
+        } else {
+            board[i][j] = board[i + 1][j]
+            if Set(board[i]).count == 1 {
+                answer = board[i].count
+            }
+        }
+    }
+}
+
+if answer > char.max()! {
+    print(answer)
+} else {
+    print(char.max())
+}
+
+
