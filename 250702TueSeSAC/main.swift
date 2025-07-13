@@ -1139,36 +1139,78 @@ import Foundation
 //print(answer)
 
 
-let n = Int(readLine()!)!
-var board: [[String]] = []
-var answer = 0
-var char: [Int] = []
+//let n = Int(readLine()!)!
+//var board: [[String]] = []
+//var answer = 0
+//var char: [Int] = []
+//
+//for i in 0..<n {
+//    let input = readLine()!.map { String($0) }
+//    board.append(input)
+//    char.append(Set(input).count)
+//}
+//
+//
+//
+//for i in 0...n - 1 {
+//    for j in 0..<n {
+//        if i + 1 == n {
+//            break
+//        } else {
+//            board[i][j] = board[i + 1][j]
+//            if Set(board[i]).count == 1 {
+//                answer = board[i].count
+//            }
+//        }
+//    }
+//}
+//
+//if answer > char.max()! {
+//    print(answer)
+//} else {
+//    print(char.max())
+//}
 
-for i in 0..<n {
-    let input = readLine()!.map { String($0) }
-    board.append(input)
-    char.append(Set(input).count)
-}
+//let input = readLine()!.split(separator: " ").map { Int($0)! }
+//let a = input[0], b = input[1], c = input[2], d = input[3], e = input[4], f = input[5]
+//
+//loop: for x in -999...999 {
+//    for y in -999...999 {
+//        if a * x + b * y == c && d * x + e * y == f {
+//            print(x, y)
+//            break loop
+//        }
+//    }
+//}
 
 
+//var array: [Int] = []
+//
+//func isPrimeNumber(n: Int) -> Bool {
+//    if n < 2 {
+//        return false
+//    }
+//    for i in 2..<n {
+//        if n % i == 0 {
+//            return false
+//        }
+//    }
+//    return true
+//}
+//
+//for i in 1...1000000 {
+//    if isPrimeNumber(n: i) {
+//        array.append(i)
+//    }
+//}
+//    
 
-for i in 0...n - 1 {
-    for j in 0..<n {
-        if i + 1 == n {
-            break
-        } else {
-            board[i][j] = board[i + 1][j]
-            if Set(board[i]).count == 1 {
-                answer = board[i].count
-            }
-        }
-    }
-}
+//var num = [1,2,3,4,5,6,7,8,9]
+//
+//var a: [Int] = [2, 4, 11]
+//
+//print(a.filter { num.contains($0) }.count)
 
-if answer > char.max()! {
-    print(answer)
-} else {
-    print(char.max())
-}
+var a = 324
 
 
