@@ -286,21 +286,21 @@ import Foundation
 //
 //for i in 0..<testCaseNum {
 //    let input = readLine()!.split(separator: " ").map { String($0) }
-//    
+//
 //    let first = input[0]
 //    let second = input[1]
-//    
+//
 //    var a: [Int] = []
 //    var b: [Int] = []
-//    
+//
 //    for i in first.utf16 {
 //        a.append(Int(i))
 //    }
-//    
+//
 //    for i in second.utf16 {
 //        b.append(Int(i))
 //    }
-//    
+//
 //    for i in 0..<a.count {
 //        if a[i] < b[i] {
 //            answer.append(b[i] - a[i])
@@ -310,10 +310,10 @@ import Foundation
 //            answer.append(0)
 //        }
 //    }
-//    
+//
 //    let result = answer.map { String($0) }.joined(separator: " ")
 //    print("Distances: \(result)")
-//    
+//
 //    answer = []
 //}
 
@@ -336,14 +336,14 @@ import Foundation
 //var count = 0
 //
 //for i in 0..<roomSize {
-//    
+//
 //    let input = readLine()!.split(separator: "").map { String($0) }
-//    
+//
 //    var a: [String] = []
-//    
+//
 //    print(input)
-//    
-//    
+//
+//
 //    for i in input {
 //        count += 1
 //        if i == "X" {
@@ -355,8 +355,8 @@ import Foundation
 //            answer += 1
 //        }
 //    }
-//    
-//    
+//
+//
 //}
 //
 //print(answer)
@@ -465,7 +465,7 @@ import Foundation
 //func sol() {
 //    for i in 0..<n {
 //        let input = readLine()!.split(separator: " ").map { String($0) }
-//        
+//
 //        board.append((input[0], Int(input[1])!, Int(input[2])!, Int(input[3])!))
 //    }
 //}
@@ -523,7 +523,7 @@ import Foundation
 //
 //for _ in 0..<n {
 //    let input = readLine()!.split(separator: " ").map { String($0) }
-//    
+//
 //    if input[1] == "enter" {
 //        dic[input[0]] = true
 //    } else {
@@ -544,14 +544,14 @@ import Foundation
 //
 //for i in 0..<n {
 //    let input = Int(readLine()!)!
-//    
+//
 ////    if let dic = dic[input] {
 ////        dic = 1
 ////    } else {
 ////        dic += 1
 ////    }
-//    
-//    
+//
+//
 //}
 //
 //var answer = ""
@@ -595,7 +595,7 @@ import Foundation
 //for _ in 0..<n {
 //    let input = readLine()!
 //    var score = 0
-//    
+//
 //    for char in input {
 //        if Int(String(char)) != nil {
 //            score += Int(String(char))!
@@ -611,11 +611,11 @@ import Foundation
 //    if $0.key.count != $1.key.count {
 //        return $0.key.count < $1.key.count
 //    }
-//    
+//
 //    if $0.value != $1.value {
 //        return $0.value < $1.value
 //    }
-//    
+//
 //    return $0.key < $1.key
 //}
 //
@@ -643,9 +643,9 @@ import Foundation
 //    }
 //    let timeStr = input2!.split(separator : " ")[0]
 //    let name = String(input2!.split(separator : " ")[1])
-//    
+//
 //    let time = Int(timeStr.split(separator: ":")[0])!*60 + Int(timeStr.split(separator: ":")[1])!
-//    
+//
 //    if time <= Stime {
 //        if user[name] == nil {
 //            user[name] = 1
@@ -764,9 +764,9 @@ import Foundation
 //    case 2:
 //    for i in board {
 //        let reverse = i.reversed()
-//        
+//
 //        print(String(reverse))
-//        
+//
 //    }
 //    case 3:
 //        for i in board.reversed() {
@@ -804,7 +804,7 @@ import Foundation
 //
 //            let ny = y + dy[dir]
 //            let nx = x + dx[dir]
-//            
+//
 //            if ny < 0 || ny >= rows || nx < 0 || nx >= cols || answer[ny][nx] != "" {
 //                dir = (dir + 1) % 4
 //                y = y + dy[dir]
@@ -814,7 +814,7 @@ import Foundation
 //                x = nx
 //            }
 //        }
-//        
+//
 //        for i in 0..<rows{
 //            for j in 0..<cols {
 //                if answer[i][j] != array[i][j] {
@@ -822,12 +822,12 @@ import Foundation
 //                }
 //            }
 //        }
-//        
+//
 //        count = 0
 //
 //    }
-//    
-//    
+//
+//
 //}
 //
 //if rows > 8 && cols > 8 {
@@ -840,7 +840,7 @@ import Foundation
 //
 //        let ny = y + dy[dir]
 //        let nx = x + dx[dir]
-//        
+//
 //        if ny < 0 || ny >= rows || nx < 0 || nx >= cols || answer[ny][nx] != "" {
 //            dir = (dir + 1) % 4
 //            y = y + dy[dir]
@@ -850,7 +850,7 @@ import Foundation
 //            x = nx
 //        }
 //    }
-//    
+//
 //    for i in 0..<rows{
 //        for j in 0..<cols {
 //            if answer[i][j] != array[i][j] {
@@ -858,7 +858,7 @@ import Foundation
 //            }
 //        }
 //    }
-//    
+//
 //    count = 0
 //
 //}
@@ -871,7 +871,7 @@ import Foundation
 //
 //    let ny = y + dy[dir]
 //    let nx = x + dx[dir]
-//    
+//
 //    if ny < 0 || ny >= rows || nx < 0 || nx >= cols || answer[ny][nx] != "" {
 //        dir = (dir + 1) % 4
 //        y = y + dy[dir]
@@ -904,7 +904,7 @@ import Foundation
 //
 //for y in 0..<10 {
 //    let input = readLine()!.split(separator: " ")
-//    
+//
 //    if y < 5 {
 //        for x in 0..<5 {
 //            let value = String(input[x])
@@ -929,13 +929,13 @@ import Foundation
 //            countBoard.append(position)
 //        }
 //    }
-//    
+//
 //    for position in countBoard {
-//        
+//
 //        if position.x >= 0 && position.x < 5 {
 //            yCount[position.x] += 1
 //        }
-//        
+//
 //        if position.y >= 0 && position.y < 5 {
 //            xCount[position.y] += 1
 //        }
@@ -973,7 +973,7 @@ import Foundation
 //                a = i
 //                b = j
 //                c = k
-//                
+//
 //                if a % 2 == 0 && c >= b + 2 && a + b + c == input {
 //                    answer += 1
 //                }
@@ -1016,10 +1016,10 @@ import Foundation
 //        if dwarf[i] + dwarf[j] == target {
 //            var array = [i, j]
 //            array.sort()
-//            
+//
 //            dwarf.remove(at: array[0])
 //            dwarf.remove(at: array[1])
-//            
+//
 //            print(dwarf.sort())
 //        }
 //    }
@@ -1127,7 +1127,7 @@ import Foundation
 //
 //for i in 1...input {
 //    char = String(i).map { Int(String($0))! }
-//    
+//
 //    if char.reduce(0, +) + i == input {
 //        answer = i
 //        break
@@ -1203,7 +1203,7 @@ import Foundation
 //        array.append(i)
 //    }
 //}
-//    
+//
 
 //var num = [1,2,3,4,5,6,7,8,9]
 //
@@ -1211,6 +1211,164 @@ import Foundation
 //
 //print(a.filter { num.contains($0) }.count)
 
-var a = 324
+//let n = Int(readLine()!)!
+//var table: [Int] = []
+//var left = 1
+//var right = 1
+//
+//
+//for _ in 0..<n {
+//    table.append(Int(readLine()!)!)
+//}
+//
+//var high = table[0]
+//
+//for i in 0..<table.count - 1 {
+//    if high > table[i + 1] {
+//        continue
+//    }
+//
+//    if high < table[i] {
+//        high = table[i]
+//        left += 1
+//    } else if table[i] < table[i + 1] {
+//        high = table[i + 1]
+//        left += 1
+//    } else {
+//        left += 0
+//    }
+//}
+//
+//
+//table.reverse()
+//
+//high = table[0]
+//
+//for i in 0..<table.count - 1 {
+//    if high > table[i + 1] {
+//        continue
+//    }
+//
+//    if high < table[i] {
+//        high = table[i]
+//        right += 1
+//    } else if table[i] < table[i + 1] {
+//        high = table[i + 1]
+//        right += 1
+//    } else {
+//        right += 0
+//    }
+//}
+//
+//print("\(left)\n\(right)")
+
+//let input = readLine()!.split(separator: " ").map  { Int($0)! }
+//var xCount = 1
+//var yCount = 1
+//var board: [Int] = []
+//var answer: [Int] = []
+//
+//var xBoard: [Int] = []
+//var yBoard: [Int] = []
+//
+//var tf = true
+//
+//while tf {
+//    xBoard.append(input[0] * xCount + input[2])
+//    yBoard.append(input[1] * yCount + input[3])
+//    xCount += 1
+//    yCount += 1
+//
+//    for i in xBoard {
+//        for j in yBoard {
+//            if i == j {
+//                board.append(i)
+//                tf = false
+//            }
+//        }
+//    }
+//}
+//
+//print(board)
+
+//var input = readLine()!.map { String($0) }
+//let word = readLine()!.map { String($0) }
+//var answer: [Int] = []
+//
+//for startIndex in 0..<input.count {
+//    let tempInput = Array(input[startIndex...])
+//    var count = 0
+//
+//    let chunks = stride(from: 0, to: tempInput.count, by: word.count).map {
+//        Array(tempInput[$0..<min($0 + word.count, tempInput.count)])
+//    }
+//
+//    for chunk in chunks {
+//        if chunk == word && chunk.count == word.count {
+//            count += 1
+//        }
+//    }
+//
+//    answer.append(count)
+//}
+//
+//print(answer.max() ?? 0)
+
+//var input = readLine()!.map { String($0) }
+//let word = readLine()!.map { String($0) }
+//var answer: [Int] = []
+//var count = 0
+//
+//var offset = input.count - word.count
+//
+//if offset > 0 {
+//    for _ in 0..<input.count {
+//        let newArray =  stride(from: 0, to: input.count, by: word.count).map {
+//            Array(input[$0..<min($0 + word.count, input.count)])
+//        }
+//        
+//        for i in newArray {
+//            if i == word {
+//                count += 1
+//            }
+//        }
+//        
+//        answer.append(count)
+//        input.remove(at: 0)
+//        count = 0
+//        
+//    }
+//} else if offset == 0 {
+//    if input == word {
+//        answer.append(1)
+//    } else {
+//        answer.append(0)
+//    }
+//} else {
+//    answer.append(0)
+//}
+//
+//
+//print(answer.max() ?? 0)
+
+let input = readLine()!
+let word = readLine()!
+var count = 0
+
+var i = 0
+while i <= input.count - word.count {
+    let startIndex = input.index(input.startIndex, offsetBy: i)
+    let endIndex = input.index(startIndex, offsetBy: word.count)
+    let substring = String(input[startIndex..<endIndex])
+    
+    if substring == word {
+        count += 1
+        i += word.count
+    } else {
+        i += 1  
+    }
+}
+
+print(count)
 
 
