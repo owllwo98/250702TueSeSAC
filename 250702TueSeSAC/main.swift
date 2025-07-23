@@ -1503,3 +1503,101 @@ import Foundation
 // print(answer)
 
 
+//var arr: [(Int, Int)] = .init(repeating: (0, 0), count: 100)
+//func fibo(_ n: Int) -> Int {
+//    if n == 0 {
+//        arr.append((n, 0))
+//        return 0
+//    }
+//    else if n == 1 {
+//        arr.append((n, 1))
+//        return 1
+//    }
+//    else {
+//        if arr[n].0 == n {
+//            return arr[n].1
+//        } else {
+//            arr.append((n, fibo(n-1) + fibo(n-2)))
+//            return fibo(n-1) + fibo(n-2)
+//        }
+//    }
+//}
+//
+//
+//print(fibo(90))
+
+//var arr: [(Int, Int)] = .init(repeating: (0, 0), count: 100)
+//func fibo(_ n: Int) -> Int {
+//    if n == 0 {
+//        arr[n] = (n, 0)
+//        return 0
+//    }
+//    else if n == 1 {
+//        arr[n] = (n, 1)
+//        return 1
+//    }
+//    else {
+//        if arr[n].0 == n {
+//            return arr[n].1
+//        } else {
+//            let result = fibo(n-1) + fibo(n-2)
+//            arr[n] = (n, result)
+//            return result
+//        }
+//    }
+//}
+//
+//print(fibo(90))
+
+//func fibo(_ n:Int) -> Int {
+//    var dp: [Int] = .init(repeating: -1, count: n + 1)
+//    
+//    func f(_ n: Int) -> Int {
+//        if n == 0 { return 0 }
+//        if n == 1 { return 1 }
+//        if dp[n] != -1 { return dp[n] }
+//        let result = f(n-1) + f(n-2)
+//        dp[n] = result
+//        return dp[n]
+//    }
+//    
+//    return f(n)
+//}
+//
+//print(fibo(3))
+
+let n = Int(readLine()!)!
+var arr: [(Int, Int)] = []
+
+for _  in 0..<n {
+    let input = readLine()!.split(separator: " ").map { Int($0)! }
+    arr.append((input[0], input[1]))
+}
+
+var answer = 0
+
+
+var dp: [Int] = .init(repeating: -1, count: n + 1)
+// dp[n] = n 번째일부터 시작해서, 퇴사날짜까지 최대로 돈을 받을 수 있는 값
+
+// day 일자부터 퇴사날짜까지 최대로 돈을 받을 수 있는 경우를 확인하는 메서드
+func recursive(day: Int) -> Int {
+    // N + 1
+    if day >= n { return 0 }
+    if dp[day] != -1 { return dp[day] }
+
+    // day 날짜에 상담을 받거나 -> 퇴사날짜를 넘지않는 경우
+    var take = 0
+    if day + arr[day].0 <= n {
+        take = recursive(day: day + arr[day].0) + arr[day].1
+    }
+    // day 날짜에 상담을 받지 않거나
+    let skip = recursive(day: day + 1)
+    dp[day] = max(take, skip)
+
+    return dp[day]
+}
+
+print(recursive(day: 0)) // 1일차부터 퇴사일까지 최대로 돈을 받는 경우
+
+print(dp)
