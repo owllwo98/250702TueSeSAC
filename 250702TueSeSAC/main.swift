@@ -1351,24 +1351,155 @@ import Foundation
 //
 //print(answer.max() ?? 0)
 
-let input = readLine()!
-let word = readLine()!
-var count = 0
+//let input = readLine()!
+//let word = readLine()!
+//var count = 0
+//
+//var i = 0
+//while i <= input.count - word.count {
+//    let startIndex = input.index(input.startIndex, offsetBy: i)
+//    let endIndex = input.index(startIndex, offsetBy: word.count)
+//    let substring = String(input[startIndex..<endIndex])
+//    
+//    if substring == word {
+//        count += 1
+//        i += word.count
+//    } else {
+//        i += 1  
+//    }
+//}
+//
+//print(count)
 
-var i = 0
-while i <= input.count - word.count {
-    let startIndex = input.index(input.startIndex, offsetBy: i)
-    let endIndex = input.index(startIndex, offsetBy: word.count)
-    let substring = String(input[startIndex..<endIndex])
+// BOJ19942
+
+/*
+6
+100 70 90 10
+30 55 10 8 100
+60 10 10 2 70
+10 80 50 0 50
+40 30 30 8 60
+60 10 70 2 120
+20 70 50 4 4
+*/
+
+// typealias Ingredient = (Int, Int, Int, Int, Int)
+
+// let n = Int(readLine()!)!
+// let goals = readLine()!.split(separator: " ").map { Int($0)! }
+// var arr: [Ingredient] = []
+
+// for _ in 0..<n {
+//     let input = readLine()!.split(separator: " ").map { Int($0)! }
+//     let ingredient = Ingredient(input[0], input[1], input[2], input[3], input[4] )
+//     arr.append(ingredient)
+// }
+
+// var answer = Int.max
+// var selectedIndexs: [[Int]] = []
+
+// func recursive(idx: Int, p: Int, f: Int, c: Int, v: Int, price: Int, selected: Set<Int>) {
+//     if idx == n {
+//         if p >= goals[0] && f >= goals[1] && c >= goals[2] && v >= goals[3] {
+//             // answer = min(price, answer)
+//             if answer > price {
+//                 answer = price
+//                 selectedIndexs = [Array(selected).sorted()]
+//             } else if answer == price {
+//                 // selectedIndexs = [Array(selected).sorted()]
+//                 selectedIndexs.append(Array(selected).sorted())
+//             }
+//         }
+//         return
+//     }
+
+//     recursive(idx: idx + 1, p: p + arr[idx].0, f: f + arr[idx].1, c: c + arr[idx].2, v: v + arr[idx].3, price: price + arr[idx].4, selected: selected.union([idx + 1]))
+//     recursive(idx: idx + 1, p: p , f: f , c: c , v: v, price: price, selected: selected)
+// }
+
+// recursive(idx: 0, p: 0, f: 0, c: 0, v: 0, price: 0, selected: [])
+
+// if selectedIndexs.count == 0 {
+//     print("-1")
+// } else {
+//     let sortedIndexs = selectedIndexs.sorted { first, second in
+//     for i in 0..<min(first.count, second.count) {
+//         if first[i] != second[i] {
+//             return first[i] < second[i]
+//         }
+//     }
+//     return first.count < second.count
+//     }
+
+//     print(answer)
+//     for i in sortedIndexs[0] {
+//         print(i, terminator: " ")
+//     }
+// }
+
+
+// BOJ15663
+
+// let input = readLine()!.split(separator: " ").map { Int($0)! }
+// let n = input[0], m = input[1]
+// var arr = readLine()!.split(separator: " ").map { Int($0)! }.sorted()
+
+// var vis: [Bool] = .init(repeating: false, count: n)
+// var result: [Int] = .init(repeating: 0, count: m)
+// var answer = ""
+
+// func recursive(k: Int) {
+//     if k == m {
+//         answer += result.map { String($0) }.joined(separator: " ") + "\n"
+//         return
+//     }
     
-    if substring == word {
-        count += 1
-        i += word.count
-    } else {
-        i += 1  
-    }
-}
+//     var used = 0
+//     for i in 0..<n {
+//         if !vis[i] {
+//             if used == arr[i] { continue }
+//             vis[i] = true
+//             result[k] = arr[i]
+//             used = arr[i]
+//             recursive(k: k + 1)
+//             vis[i] = false
+//         }
+//     }
+// }
 
-print(count)
+// recursive(k: 0)
+// print(answer)
+
+// BOJ14501
+
+// let n = Int(readLine()!)!
+// var arr: [(Int, Int)] = []
+
+// for _  in 0..<n {
+//     let input = readLine()!.split(separator: " ").map { Int($0)! }
+//     arr.append((input[0], input[1]))
+// }
+
+// var answer = 0
+// func recursive(day: Int, sum: Int) {
+//     // N + 1
+
+//     if day >= n {
+//         answer = max(answer, sum)
+//         return
+//     }
+
+//     // day 날짜에 상담을 받거나 -> 퇴사날짜를 넘지않는 경우
+//     if day + arr[day].0 <= n {
+//         recursive(day: day + arr[day].0, sum: sum + arr[day].1)
+//     }
+//     // day 날짜에 상담을 받지 않거나
+//     recursive(day: day + 1, sum: sum)
+// }
+
+// recursive(day: 0, sum: 0)
+
+// print(answer)
 
 
